@@ -1,6 +1,7 @@
 "use strict";
 
 const container = document.getElementById("container");
+const music = document.getElementById("music");
 const squares = 8000;
 const colors = [
   "#FFBF00",
@@ -55,6 +56,7 @@ const getRandomColor = () => {
 };
 
 const setHover = (square) => {
+  music.play();
   const color = getRandomColor();
   square.style.backgroundColor = color;
   square.style.boxShadow = `0 0 0.2rem ${color}, 0 0 1rem ${color}`;
